@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 namespace MyAPI.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("class")] //Changed the route to this controller
     public class CISClassController : ControllerBase
     {
         private Dictionary<String, CISClass> CISClasses = new Dictionary<String, CISClass>();
@@ -40,19 +40,19 @@ namespace MyAPI.Controllers
                 });
         }
 
-        [HttpGet]
+        [HttpGet("all")]
         public CISClass[] GetAll()
         {
             return this.CISClasses.Values.ToArray();
         }
 
-        [HttpGet("ClassID")]
+        [HttpGet("id")]
         public CISClass GetClass(string ClassID)
         {
             return this.CISClasses[ClassID];
         }
 
-        [HttpPost]
+        [HttpPost("id")]
         public CISClass[] AddClass([FromBody] CISClass classModel)
         {
             String classId = classModel.ClassCode + "-" + classModel.Section;
