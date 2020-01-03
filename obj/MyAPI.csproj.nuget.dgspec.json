@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Matthew Shan\\CIS\\MyAPI\\MyAPI.csproj": {}
+    "C:\\Users\\Matthew\\CIS\\MyAPI\\MyAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Matthew Shan\\CIS\\MyAPI\\MyAPI.csproj": {
+    "C:\\Users\\Matthew\\CIS\\MyAPI\\MyAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matthew Shan\\CIS\\MyAPI\\MyAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Matthew\\CIS\\MyAPI\\MyAPI.csproj",
         "projectName": "MyAPI",
-        "projectPath": "C:\\Users\\Matthew Shan\\CIS\\MyAPI\\MyAPI.csproj",
-        "packagesPath": "C:\\Users\\Matthew Shan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matthew Shan\\CIS\\MyAPI\\obj\\",
+        "projectPath": "C:\\Users\\Matthew\\CIS\\MyAPI\\MyAPI.csproj",
+        "packagesPath": "C:\\Users\\Matthew\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Matthew\\CIS\\MyAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Matthew Shan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Matthew\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
