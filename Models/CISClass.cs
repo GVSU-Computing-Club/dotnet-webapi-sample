@@ -1,11 +1,10 @@
 using System;
 
-namespace MyAPI
+namespace MyAPI.Models
 {
     public class CISClass {
         public int ClassCode {get; set;}
         public int Section {get; set;}
         public String Instructor {get; set;}
-        public int[] Prereqs {get; set;}
     }
 }

@@ -19,24 +19,21 @@ namespace MyAPI.Controllers
                 {
                     ClassCode = 162,
                     Section = 1,
-                    Instructor = "Professor Bob",
-                    Prereqs = new int[] {}
+                    Instructor = "Professor Bob"
                 });
             CISClasses.Add("162-2", 
                 new CISClass
                 {
                     ClassCode = 162,
                     Section = 2,
-                    Instructor = "Professor Rob",
-                    Prereqs = new int[] {}
+                    Instructor = "Professor Rob"
                 });
             CISClasses.Add("163-1", 
                 new CISClass
                 {
                     ClassCode = 163,
                     Section = 1,
-                    Instructor = "Professor Joe",
-                    Prereqs = new int[] {162}
+                    Instructor = "Professor Joe"
                 });
         }
 
