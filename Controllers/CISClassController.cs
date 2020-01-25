@@ -4,32 +4,33 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using MyAPI.Models;
 
 namespace MyAPI.Controllers
 {
     [ApiController]
-    [Route("class")] //Changed the route to this controller
+    [Route("class")] //Changed the route to this controller to /class/
     public class CISClassController : ControllerBase
     {
-        private Dictionary<String, CISClass> CISClasses = new Dictionary<String, CISClass>();
+        private Dictionary<String, CISClassModel> CISClasses = new Dictionary<String, CISClassModel>();
 
         public CISClassController() {
             CISClasses.Add("162-1", 
-                new CISClass
+                new CISClassModel
                 {
                     ClassCode = 162,
                     Section = 1,
                     Instructor = "Professor Bob"
                 });
             CISClasses.Add("162-2", 
-                new CISClass
+                new CISClassModel
                 {
                     ClassCode = 162,
                     Section = 2,
                     Instructor = "Professor Rob"
                 });
             CISClasses.Add("163-1", 
-                new CISClass
+                new CISClassModel
                 {
                     ClassCode = 163,
                     Section = 1,
@@ -37,20 +38,23 @@ namespace MyAPI.Controllers
                 });
         }
 
+        //GET /class/all Request to get all of our data
         [HttpGet("all")]
-        public CISClass[] GetAll()
+        public CISClassModel[] GetAll()
         {
             return this.CISClasses.Values.ToArray();
         }
 
+        //GET /class/id Request to get info on a class based on the class id (Format: Code-section)
         [HttpGet("id")]
-        public CISClass GetClass(string ClassID)
+        public CISClassModel GetClass(string ClassID)
         {
             return this.CISClasses[ClassID];
         }
 
+        //POST /class/id Adds a new class to the dictionary
         [HttpPost("id")]
-        public CISClass[] AddClass([FromBody] CISClass classModel)
+        public CISClassModel[] AddClass([FromBody] CISClassModel classModel)
         {
             String classId = classModel.ClassCode + "-" + classModel.Section;
             this.CISClasses.Add(classId, classModel);
@@ -58,12 +62,3 @@ namespace MyAPI.Controllers
         }
     }
 }
-/*
-        [HttpPost]
-        public ActionResult Post([FromBody] CISClassClass class)
-        {
-            String classId = class.ClassCode + "-" + class.Section;
-            CISClasses.Add(classId, class);
-            return Ok();
-        }
-*/
