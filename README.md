@@ -1,5 +1,7 @@
 Post on this lecture (Week 1): https://gvsucomputingclub.com/posts/Getting%20Started%20with%20.NET%20Core/
 
+Switch to the branch `EntityFramework` to see lecture 2 code.
+
 
 <!-- 1. After we move the WeatherForecast class to Models, lets create our own controllers and models. First we will create a `CISClass.cs` class
 
